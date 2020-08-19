@@ -6,7 +6,8 @@ body{
     background-color: rgb(255, 255, 255);
 }
 h1{
-    color: darkslategray;
+    color: rgb(255, 255, 255);
+    text-align: center;
 
 }
 h2{
@@ -29,12 +30,5 @@ h5{
     background-color: rgb(34, 37, 39);
    margin: unset;
    z-index: 1;
-   position;
-}
-.square1{
-    width:100px;
-    height: 200px;
-    background-color: rgb(45, 69, 85);
-   margin: unset;
-   z-index: 2;
+
 }
