@@ -22,7 +22,7 @@
    grid-area: header;
 }
 .sidebar{
-    background-color:rgb(34, 30, 30);
+    background-color:rgb(59, 49, 49);
    grid-area: sidebar;
 }
 .content{
