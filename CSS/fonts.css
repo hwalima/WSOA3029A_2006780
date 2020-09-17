@@ -1,4 +1,15 @@
+/*-----font family kufam.........*/
 @font-face{
     font-family: kufam;
     src:url('../fonts/Kufam/Kufam-VariableFont_wght.ttf');
+}
+/*-----font family Cormorant_Garamond.........*/
+@font-face{
+    font-family: Cormorant;
+    src:url('../fonts/Cormorant_Garamond/CormorantGaramond-Regular.ttf');
+}
+/*-----font family Maitree-Regular.........*/
+@font-face{
+    font-family: Maitree;
+    src:url('../fonts/Maitree/Maitree-Regular.ttf');
 }
