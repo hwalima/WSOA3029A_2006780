@@ -15,6 +15,7 @@
        <!--Owl Carousel-->
        <link rel="stylesheet" href="./CSS/owl.carousel.css">
        <link rel="stylesheet" href="./CSS/owl.theme.default.css">
+        
 
 
 
@@ -24,7 +25,8 @@
         <!------------------------Navigation---------------------------------->
 <nav class="nav">
     <div class="nav-menu flex-row">
-        <div class="nav-brand"><a href="#" class="text-gray"> <img src="./Assets/logo.png" style="height:2.5cm;"></a></div>
+        <div class="nav-brand"><a href="#" class="text-gray"> <img src="./Assets/logo2.png" style="height:3.5cm;"></a></div>
+        
          <div>
              <div class="toggle-collapse">
                  <div class="toggle-icons">
@@ -58,21 +60,59 @@
         <!------------------X------Navigation---------------------X------------->
 <!-------------Main Section---------->
 <main>
-    <!---------------------Blogs-------------------------->
+    
+    <!-- --------------------- Blog Carousel ----------------- -->
+
     <section>
         <div class="blog">
             <div class="container">
-                <div class="owl-carourasel owl-theme blog-post"></div>
-                <div class="blog-content"></div>
-                <img src="./Assets/blog1.png" alt="blog-1">
-                <div class="blog-title">
-                    <h3>The politics of representation</h3>
+                <div class="owl-carousel owl-theme blog-post">
+                    <div class="blog-content" data-aos="fade-right" data-aos-delay="200">
+                        <img src="./assets/new1.png" alt="post-1">
+                        <div class="blog-title">
+                            <h3>Politics in representation</h3>
+                            
+                            <span>(Kidd, 2016:22) argues that for media semiotics, the overarching influence is how the content is then separated from the form...</span>
+                            <button class="btn btn-blog"><a href="Blog1.html"> read more&nbsp;<i class="fas fa-arrow-right"></i></a></button>
+                        </div>
+                    </div>
+                    <div class="blog-content" data-aos="fade-in" data-aos-delay="200">
+                        <img src="./assets/new2.png" alt="post-1">
+                        <div class="blog-title">
+                            <h3>Blog two</h3>
+                            
+                            <span>Lorem ipsum dolo</span>
+                            <button class="btn btn-blog"><a href="Blog2.html"> read more&nbsp;<i class="fas fa-arrow-right"></i></a></button>
+                        </div>
+                    </div>
+                    <div class="blog-content" data-aos="fade-left" data-aos-delay="200">
+                        <img src="./Assets/new3.png" alt="post-1">
+                        <div class="blog-title">
+                            <h3>Blog three</h3>
+                            
+                            <span>2 minutes</span>
+                            <button class="btn btn-blog"><a href="Blog3.html"> read more&nbsp;<i class="fas fa-arrow-right"></i></a></button>
+                        </div>
+                    </div>
+                    <div class="blog-content" data-aos="fade-right" data-aos-delay="200">
+                        <img src="./assets/new4.png" alt="post-1">
+                        <div class="blog-title">
+                            <h3>Blog four</h3>
+                            
+                            <span>2 minutes</span>
+                            <button class="btn btn-blog"><a href="Blog4.html"> read more&nbsp;<i class="fas fa-arrow-right"></i></a></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="owl-navigation">
+                    <span class="owl-nav-prev"><i class="fas fa-long-arrow-alt-left"></i></span>
+                    <span class="owl-nav-next"><i class="fas fa-long-arrow-alt-right"></i></span>
                 </div>
             </div>
         </div>
     </section>
-    
-    <!-----------X----------Blogs------------X------------->
+
+    <!-- ----------x---------- Blog Carousel --------x-------- -->
 
 </main>
 
@@ -89,5 +129,7 @@
     <script src="./JavaScript/owl.carousel.js"></script> 
 <!--Custom Javascript file-->
 <script src="./JavaScript/main.js"></script>
+<!--Animations-->
+<script src="./JavaScript/aos.js"></script>
 </body>
 </html>
