@@ -355,6 +355,12 @@ footer.footer .Social-Media div> img{
     .canva{
         grid-template-columns: repeat(1,1fr);
     }
+    .about-us{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .about-us1{
+        grid-template-columns: repeat(1,1fr);
+    }
 }
 
 /*-----X-----viewport 750-------X*/
@@ -377,6 +383,14 @@ footer.footer .Social-Media div> img{
    nav .toggle-collapse{
        width: 80% !important;
    }
+   .about-us{
+    grid-template-columns: repeat(1,1fr);
+    width:20% !important;
+}
+.about-us1{
+    grid-template-columns: repeat(1,1fr);
+    width:20% !important;
+}
 }
 
 /*-----X-----viewport 520-------X*/
