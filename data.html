@@ -5,6 +5,7 @@
     <head>
         <meta charset="=utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie-edge"/>
         <title>Essential  Visualisations</title>
 
 
@@ -16,6 +17,7 @@
         <link rel="stylesheet" href="./CSS/aos.css">
         <!------------D3 library----------->
         <script src="https://d3js.org/d3.v6.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
 
     </head>
 
@@ -57,23 +59,110 @@
         <!------------------X------Navigation---------------------X------------->
 <!-------------Main Section---------->
 <main>
+    
     <!---------------------Data Diagram Title-------------------------->
     
     <!-----------X----------Data Diagram-------------X------------->
+    <container class="about-us"><h4>This bar graph illustrates the Covid-19 statistics in South Africa for the 18th of september 2020<br>
+        The intention is to create a colour scheme of representation that will take away the stigma associated with the impact of Covid-19. <br>
+        The chart was drawn using  the Chart.Js library. The data was however fetched from the API and the represented locally in a CSV fomart.
+        </h4></container>
+    <container class="about-us1"><h4>
+        When hovering over the bars of the graph, there is a pink overlay, which aims to neutralise the colour comparison. <br>
+        Moreover, The scaling of the graph is meant to further reduce the graphical comparison, thus "lowering" the death bar. <br>
+        This experimentation is therefore a deliberate reseach on how color grading and scaling in a chart can be used as semiotic devises.
+        
+        </h4></container>
     
     <!---------------------chart area-------------------------->
-    
-    <section class=""><div class="canva" >
-
-
-
-      
-    </div></section>
+    <canvas id="Chart" width="800" height="300"></canvas>
     
     <!-----------X----------Chart area-------------X------------->
 
 
 </main>
+
+<script>
+   
+       createChart();
+    
+async function createChart(){ 
+    const data=await getData();
+    const ctx = document.getElementById('Chart').getContext('2d');
+    
+    const myChart = new Chart(ctx, {
+    type: 'bar',
+            data: {
+            labels: data.xs,
+            fontColor:'#4E4CD1',
+            datasets: [
+                {
+            label: 'South Africa COvid-19 Statistics: 18 September 2020',
+            data: data.ys,
+            fill:true,
+            
+            
+            backgroundColor: [
+                'rgba(125, 60, 152)',
+                'rgba(214, 137, 16)',
+                'rgba(40, 180, 99)',
+                'rgba(203, 67, 53)',
+                
+            ],
+            hoverBackgroundColor:'rgba(245, 183, 177)',
+                
+             
+        }
+        ],
+        options: {
+                    scales: {
+                    yAxes: [
+                {width:100,
+                        ticks: {
+                            //Defines how the Data formating is labelled
+                        callback: function(value, index, values)
+                        { return value+'°';
+                    }
+                }
+            }
+        ]
+        }
+    }
+//});
+    
+        }
+    });
+}
+
+
+
+    
+async function getData(){
+
+    //ZonAnn.Ts+dSST.csv
+    const response=await fetch('CovidData.csv');
+    const xs=[];
+    const ys=[];
+    
+     const data=await response.text();
+   
+    
+    const table=data.split('\n').slice(0);
+
+    table.forEach(row=>{
+        const columns=row.split(',');
+        const year=columns[0];
+        xs.push(year);
+        const temp=columns[1];
+        ys.push(parseFloat(temp)+14);
+console.log(year, temp);
+
+    });
+    //return an object with xs and ys
+   return{xs,ys};
+    }
+    //getData();
+</script>
 
 
 
@@ -88,8 +177,9 @@
 
 <!------visualisation script-->
 
-<script src="./JavaScript/app.js"></script>
+--<script src="./JavaScript/app.js"></script>
 
 
 </body>
+
 </html>

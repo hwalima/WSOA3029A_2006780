@@ -29,7 +29,7 @@ $(document).ready(function(){
     //owl-courasel for blog
     $(".owl-carousel").owlCarousel({
         loop:true,
-        autoplay:false,
+        autoplay:true,
         autoplayTimeout:3000,
         dots:false,
         nav:true,
