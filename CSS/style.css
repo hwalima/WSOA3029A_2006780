@@ -44,7 +44,7 @@ ul{
    h2{
        font-family: var(--kufam);
        font-size: 1.8rem;
-       align-content: center;
+       text-align: center;
    }
    h3{
     font-family: var(--kufam);
