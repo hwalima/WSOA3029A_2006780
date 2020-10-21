@@ -24,14 +24,14 @@ const rect= svg.selectAll("rect")
    let newRecovered
    let newDeath
    //i fetch using this code
-    d3.json('https://api.covid19api.com/live/country/south-africa/status/confirmed')  
+    d3.json('https://api.covid19api.com/live/country/south-africa')  
     //.then(response => response.json())            
       .then(data => {console.log
-        (data[18].Active,
+        (data[16].Active,
           
-        data[18].Confirmed,
-        data[18].Recovered,
-        data[18].Deaths
+        data[16].Confirmed,
+        data[16].Recovered,
+        data[16].Deaths
        )
            
         newActive=data[18].Active
