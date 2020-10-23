@@ -175,7 +175,7 @@ async function getData(){
 
 <div><section class="graph">
   <h3 style="text-align: center;"> Comparison between 21 September and 21 October</h3>
-<script>d3.selectAll("h3").transition().style("color","(0,193,213)").duration(5000);</script>
+<script>d3.selectAll("h3").transition().style("color","orange").duration(5000);</script>
   <div id="my_dataviz" style="align-content: center;"></div>
   <button class="btn2" onclick="update('var1')">21 September</button>
   <button class="btn2"onclick="update('var2')">21 October</button>
@@ -207,7 +207,7 @@ async function getData(){
       .range([ height, 0]);
     var yAxis = svg.append("g")
       .attr("class", "myYaxis")
-    
+    d3.selectAll("h3").transition().style("color","orange").duration(5000);
     
     // A function that create / update the plot for a given variable:
     function update(selectedVar) {
@@ -215,6 +215,7 @@ async function getData(){
       // Parse the Data
       d3.csv('comparison.csv', function(data) {
     
+        console.log(data)
         // X axis
         x.domain(data.map(function(d) { return d.group; }))
         xAxis.transition().duration(1000).call(d3.axisBottom(x))
@@ -239,6 +240,8 @@ async function getData(){
             .attr("width", x.bandwidth())
             .attr("height", function(d) { return height - y(d[selectedVar]); })
             .attr("fill", "#00C1D5", )
+
+            
             
       })
     
@@ -254,17 +257,7 @@ async function getData(){
 
 <!-----------------------X------------Second graph----------------X--------------------->
 
-<!-----------------------------------Third Graph------------------------------------->
-<div><section class="graph2">
-  <!-- Create a div where the graph will take place -->
-  <h3 style="text-align: center;"> Third Graph</h3>
-<script>d3.select("h3").transition().style("color","cyan").duration(5000);</script>
 
-</section>
-
-</div>
-
-<!---------------X--------------------Third Graph----------------X--------------------->
 
 
 
