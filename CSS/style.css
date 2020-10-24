@@ -93,10 +93,10 @@ p{
 
 /*---------------navbar----------------------*/
 .nav{
-background: white;
+    background: var(--gb-color);
 padding: 0 2rem;
 height: 0rem;
-min-height: 25vh;
+min-height: 30vh;
 overflow: hidden;
 transition: height 1s ease-in-out;
 }
@@ -104,6 +104,7 @@ transition: height 1s ease-in-out;
     display:flex;
     flex-direction: row;
     justify-content: space-between;    
+    color: #3498DB;
 }
 .nav .toggle-collapse{
     position: absolute;
@@ -156,11 +157,23 @@ color: rgb(255, 255, 255);
     padding: 0 .2rem;
 }
 .nav .social i:hover{
-    color: rgb(72, 72, 85);
+    color: #ffffff;
 }
 
 /*-------X--------navbar------------X----------*/
-
+/* Three image containers (use 25% for four, and 50% for two, etc) */
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 5px;
+  }
+  
+  /* Clear floats after image containers */
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
 /*---------------Main COntent----------------------*/
 
 /*---------------Site Title----------------------*/
@@ -197,13 +210,14 @@ color: rgb(255, 255, 255);
     background: url('../Assets/collabo-blue.png');
     opacity: 0.8;
   background-size: cover;
-  height: 110vh;
+  height: auto;
   display: flex;
   justify-content:center;
+  
 }
 .site-background{
     
-    padding-top: 1rem;
+    padding-top: 0.2rem;
     text-align: center;
   color:var(--text-normal)
  
@@ -433,7 +447,7 @@ main .blog-content .btn-blog{
 
 /*---------------Footer----------------------*/
 footer.footer{
-  height: 100%;
+  height: auto;;
   background: var(--gb-color);
   position: relative;  
 }
