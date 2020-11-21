@@ -407,13 +407,13 @@ font-size: 1.1rem;
 /*-------------------------Pe CHart------------------------*/
 
 main .blog-post .blog-content div> img{
-width: 25%;
+width: 20%;
 height: 5%;
 margin: .3rem .4rem;
 
 }
 main .blog-post .blog-content:hover{
-    transform:scale(1.3);
+    transform:scale(1.05);
     transition: all 1s ease;
 
     
@@ -429,7 +429,7 @@ main .blog-content .btn-blog{
     }
 
     main .blog-content span{
-        display: block;
+        display: inline;
 
     }
     .owl-nav{
@@ -439,7 +439,12 @@ main .blog-content .btn-blog{
         outline: none;
         background-color: violet;
     }
-
+    .imagecentre {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+      }
 /*-------X--------Blog------------X----------*/
 
 
