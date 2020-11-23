@@ -291,7 +291,7 @@ main .blog-post .blog-content{
 /*-------------------------Pe CHart------------------------*/
 .graph{
        
-    background-color: rgb(149, 152, 158);
+    background-color: rgb(255, 255, 255);
     width: auto;
     height: auto;
     grid-template-columns: 45%;
@@ -300,7 +300,7 @@ main .blog-post .blog-content{
 }
 .graph2{
      
-    background-color:#01cdfe;
+ background-color:#3498DB;
    width: auto;
    height: auto;
     padding: 0.2rem;
@@ -394,7 +394,7 @@ font-size: 1.1rem;
   
   /* Links inside the dropdown */
   .dropdown-content a {
-    color: black;
+    color: rgb(114, 26, 26);
     padding: 12px 16px;
     text-decoration: none;
     display: block;
