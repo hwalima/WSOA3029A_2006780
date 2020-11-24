@@ -289,6 +289,45 @@ main .blog-post .blog-content{
 
 }
 /*-------------------------Pe CHart------------------------*/
+
+
+/*..........................Chart 3 ----------------------*/
+
+  
+  text {
+    font: var(--kufam);
+    color: blue;
+  }
+  
+  .axis path,
+  .axis line {
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges;
+  }
+  
+  .x.axis path {
+    display: none;
+  }
+  
+  .line {
+    fill: none;
+    stroke: #3498DB;
+    stroke-width: 1.5px;
+  }
+  
+  form {
+    background: var(--eternal);
+    color: rgb(255, 255, 255);
+   padding-left: 2rem;
+    right: 10px;
+  
+    
+  }
+  
+  
+
+/*..........................Chart 3 ----------------------*/
 .graph{
        
     background-color: rgb(255, 255, 255);
