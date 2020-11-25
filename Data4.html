@@ -12,6 +12,7 @@
         <!--Custom Style-->
         
        <link rel="stylesheet" href="./CSS/style.css">
+       <link rel="stylesheet" href="./CSS/fotter.css">
        <!--Font awesome icons-->
        <link rel="stylesheet" href="./CSS/all.css">
         <!--Animations style-->
@@ -39,43 +40,55 @@
 
         <!------------------------Navigation---------------------------------->
 <nav class="nav">
-    <div class="nav-menu flex-row">
-        <div class="nav-brand"><a href="index.html" class="text-gray"> <img src="./Assets/logo2.png" style="height:3.5cm;"></a></div>
-         <div>
-             <div class="toggle-collapse">
-                 <div class="toggle-icons">
-                    <i class="fas fa-bars"></i>
-                 </div>
-             </div>
-            <ul class="nav-items">
-            <li class="nav-link">
-            <a href="./index.html">Home</a>
-            </li>
-            <li class="nav-link">
-            <a href="./data.html">Data Graphs</a>
-            </li>
-            <li class="nav-link">
-            <a href="./blogs.html">Blogs</a>
-            </li>
-            
-            <li class="nav-link">
-            <a href="./Contact.html">Contact</a>
-            </li>
-            </ul>
-        </div>
-        <div class="social text-gray">
-          <a href="facebook.html"><i class="fab fa-facebook"></i></a>  
-          <a href="Instagram.html"><i class="fab fa-instagram-square"></i></a>  
-          <a href="Itch.html"><i class="fab fa-itch-io"></i></a>  
-          <a href="twitter.html"><i class="fab fa-twitter"></i></a>  
+  <div class="nav-menu flex-row">
+      <div class="nav-brand"><a href="index.html" class="text-gray"> <img src="./Assets/logo2.png" style="height:3.5cm;"></a></div>
+      
+       <div>
+           <div class="toggle-collapse">
+               <div class="toggle-icons">
+                  
+               </div>
+           </div>
+          <ul class="nav-items">
+          <li class="nav-link">
+          <a href="./index.html">Home</a>
+          </li>
+          <li>
+              <label for="btn-1" class="show"></label>
+              <a href="data.html">Data Graphs</a>
+              <input type="checkbox" id="btn-1">
+              <ul>
+    <li><a href="Data2.html">Line Graph</a></li>
+    <li><a href="Data3.html">Pie Chart</a></li>
+    <li><a href="Data4.html">SA Provinces</a></li>
+    </ul>
+    </li>
+    
+          <li class="nav-link">
+          <a href="./blogs.html">Blogs</a>
+          </li>
+          <li class="nav-link">
+              <a href="./wireframes.html">Wireframes</a>
+              </li>
+                      <li class="nav-link">
+          <a href="./Contact.html">Contact</a>
+          </li>
+          </ul>
       </div>
-    </div>
+      <div class="social"></div>
+          <a href="facebook.html" style="color: white;"><i class="fab fa-facebook"></i></a>  
+          <a href="Instagram.html" style="color: white;"><i class="fab fa-instagram-square"></i></a>  
+          <a href="Itch.html" style="color: white;"><i class="fab fa-itch-io"></i></a>  
+          <a href="twitter.html" style="color: white;"><i class="fab fa-twitter"></i></a>  
+      </div>
+  </div>
 
-</nav>
-        <!------------------X------Navigation---------------------X------------->
+</nav><br><br><br> 
+      <!------------------X------Navigation---------------------X------------->
 <!-----------------------------------Third Graph------------------------------------->
 
-<h3 style="text-align: center;"> Provincial daily new cases: March to November 2020</h3>
+<h2 style="text-align: center;"> Provincial daily new cases: March to November 2020</h2>
+<h3 style="text-align: center;"> Click on a province to toggle data</h3>
 <script>d3.selectAll("h3").transition().style("color","#3498DB").duration(5000);</script>
 <div>
   
@@ -89,6 +102,7 @@
     <label><input type="radio" name="province" value="Northern-Cape"> Northern-Cape</label>
     <label><input type="radio" name="province" value="North-West"> North-West</label>
     <label><input type="radio" name="province" value="Western-Cape"> Western-Cape</label>
+    <label><input type="radio" name="province" value="National"> National</labe>
   </form>
 </div>
 
@@ -141,6 +155,7 @@ d3.tsv("data.tsv", function(error, data) {
     d["Northern-Cape"] = +d["Northern-Cape"];
     d["North-West"] = +d["North-West"];
     d["Western-Cape"] = +d["Western-Cape"];
+    d["National"] = +d["National"];
   });
 
   x.domain([data[0].date, data[data.length - 1].date]);
@@ -206,7 +221,57 @@ d3.tsv("data.tsv", function(error, data) {
 </script>
 
 <!---------------X--------------------Third Graph----------------X--------------------->
+<!-------------------------begining of page footer-------------------->
+<footer class="footer-distributed">
 
+  <div class="footer-left">
+      <img src="./Assets/logo2.png">
+    
+
+    <p class="footer-links">
+      <a href="index.html">Home</a>
+      |
+      <a href="blogs.html">Blogs</a>
+      |
+      <a href="data.html">Graphs</a>
+      |
+      <a href="Contact.html">Contact</a>
+    </p>
+
+    <p class="footer-company-name">© 2020 Sikhulile Dube.</p>
+  </div>
+
+  <div class="footer-center">
+    <div>
+      <i class="fa fa-map-marker"></i>
+        <p><span>University of the Witwatersrand</span>
+        </p>
+    </div>
+
+    <div>
+      <i class="fa fa-phone"></i>
+      <p style="font-size: small;">+27785425978</p>
+    </div>
+    <div>
+      <i class="fa fa-envelope"></i>
+      <p style="font-size: small " style="color: blue;" ><a href="2006780@students.wits.ac.za">2006780@students.wits.ac.za</a></p>
+    </div>
+  </div>
+  <div class="footer-right">
+    <p class="footer-company-about">
+      <span>About this website</span>
+      Tailor made data Visualisations on Covid-19.</p>
+    <div class="footer-icons">
+      <a href="facebook.html"><i class="fab fa-facebook"></i></a>
+      <a href="twitter.html"><i class="fab fa-twitter"></i></a>
+      <a href="Instagram.html"><i class="fab fa-instagram"></i></a>
+      <a href="Itch.html"><i class="fab fa-itch-io"></i></a>
+      
+    </div>
+  </div>
+</footer>
+
+<!-------------------------end of page footer-------------------->
 </body>
 
 </html>
